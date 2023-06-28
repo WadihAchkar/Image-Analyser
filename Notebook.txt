@@ -1,0 +1,103 @@
+I have a bunch of images in form of jpg and png in a directory. These images are photos taken by a phone camera,
+as such a lot of these photos display the date of the time they were taken and it looks something like the following example 02/05/2023.
+Each one represents a photo of an etiquette or a label that sometimes has a QR code and a bunch of information about a product.
+These stickers contain specific information about different products. Please note that the language used on these etiquettes or 
+labels is mostly German and sometimes English. I will give you some examples about the kind of information these images have;
+
+Artikelname
+Artikelnummer
+MHD (Mindesthaltbarkeitsdatum)
+Einfrierdatum
+Erntejahr
+LAX
+Produktionscode 
+Batch
+Lot
+
+The goal is to programmatically retrieve all the information that are on the label.
+I don't exactly know yet what kind of technology this requires. I would appreciate you giving me possible ways to find a proper solution.
+You can for example suggest services and technologies that gets the job done. Please make a plan with detailed steps to go about it.
+
+Please note that the displayed date of the time the photos were taken (mostly visible/shown in the bottom right corner of the image)
+is not of any importance, which means that it should be ignored.
+
+Please also do let me know if you require any other information from me to find a proper solution.
+For now and for testing purposes I need you to provide me with a free plan to do the job.
+
+
+I need my data to be printed out in a user-friendly manner. Preferably in a bullet point format.
+
+Since each image is unique our code has to be flexible and smart when dealing with the images.
+Which means that if a "Lot" or a "production date" is not present or missing on the etiquette,
+the code has to inform me as such. For example the code can return a message saying "Information not available".
+The messages should be displayed in two different sections. The first section should be on the left side of the document
+and written in German. The second section should be on the right side of the document and written in English.
+I'm specifically talking about the following data that the code should return:
+
+Artikelname
+Artikelnummer
+MHD (Mindesthaltbarkeitsdatum)
+Einfrierdatum
+Erntejahr
+LAX
+Produktionscode 
+Batch
+Lot
+
+
+##########################################################################################################################
+
+The validateAndCleanData function is not necessary for the job. It was included as an example to demonstrate how you can add
+validation and cleaning logic to the extracted data if needed.
+
+If you don't require any specific data validation or cleaning operations, you can omit the validateAndCleanData function from your code.
+It is not essential for the main task of extracting information from the text and writing it to a CSV file.
+
+##########################################################################################################################
+
+
+To extract information from the images containing etiquettes or labels, you can follow a step-by-step approach using
+Optical Character Recognition (OCR) and text processing techniques. Here's a plan outlining the process:
+
+1. **Preprocessing:**
+   - Iterate through the images in the directory.
+   - Apply image preprocessing techniques like resizing, denoising, and enhancing to improve OCR accuracy.
+   - Convert the images to grayscale or black-and-white if necessary.
+
+2. **OCR Processing:**
+   - Utilize an OCR library or service to extract text from the images. Popular OCR libraries include Tesseract, OCRopus, and Google Cloud Vision OCR.
+   - Ensure that the OCR solution supports both German and English languages to handle the multilingual labels.
+   - Extract the recognized text and store it for further processing.
+
+3. **Text Parsing and Extraction:**
+   - Analyze the extracted text to identify relevant information based on the given examples.
+   - Implement parsing algorithms or regular expressions to extract specific fields such as Artikelname, Artikelnummer, MHD, Einfrierdatum, etc.
+   - Account for variations in how the information may appear, allowing for different date formats or label layouts.
+
+4. **Language Processing (Optional):**
+   - If required, perform language processing techniques to differentiate between German and English text.
+   - This can involve using language detection libraries or implementing language-specific rules for identifying and handling different languages.
+
+5. **Data Validation and Cleaning:**
+   - Validate the extracted information for correctness and integrity.
+   - Implement sanity checks to verify the extracted data against known patterns or expected formats.
+   - Clean the data by removing unnecessary characters, whitespace, or noise.
+
+6. **Storage or Integration:**
+   - Decide how you want to store or utilize the extracted data.
+   - You may consider options like storing the data in a structured format (e.g., CSV or database) or integrating it into an existing system or database.
+
+7. **Iterative Testing and Refinement:**
+   - Test the solution on a subset of images, validate the results, and iterate on any necessary improvements.
+   - Monitor the performance and adjust the preprocessing steps, OCR settings, or text parsing logic accordingly.
+
+Regarding the technologies and services, here are some suggestions:
+
+- **OCR Libraries**: Tesseract OCR, OCRopus
+- **Cloud OCR Services**: Google Cloud Vision OCR, Microsoft Azure Cognitive Services OCR, AWS Rekognition (Check the availability of multilingual
+    support for German and English)
+- **Image Processing Libraries**: OpenCV, PIL (Python Imaging Library)
+- **Language Processing Libraries**: NLTK (Natural Language Toolkit), spaCy, language-detection (Java library)
+- **Data Storage or Integration**: CSV, Excel, SQL databases (e.g., MySQL, PostgreSQL)
+
+First intall git and nodejs
