@@ -21,11 +21,13 @@ You can for example suggest services and technologies that gets the job done. Pl
 Please note that the displayed date of the time the photos were taken (mostly visible/shown in the bottom right corner of the image)
 is not of any importance, which means that it should be ignored.
 
-Please also do let me know if you require any other information from me to find a proper solution.
+Please also note that the "images" directory has two subdirectories, one for the ".jpg" images and the other for ".png".
+
+Let me know if you require any other information from you to find a proper solution.
 For now and for testing purposes I need you to provide me with a free plan to do the job.
 
-
-I need my data to be printed out in a user-friendly manner. Preferably in a bullet point format.
+Make the code in such a way that the data I require will be printed out in a "file.txt" and in a user-friendly manner,
+preferably in a bullet point format.
 
 Since each image is unique our code has to be flexible and smart when dealing with the images.
 Which means that if a "Lot" or a "production date" is not present or missing on the etiquette,
