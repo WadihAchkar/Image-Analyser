@@ -103,3 +103,40 @@ Regarding the technologies and services, here are some suggestions:
 - **Data Storage or Integration**: CSV, Excel, SQL databases (e.g., MySQL, PostgreSQL)
 
 First intall git and nodejs
+
+##########################################################################################################################
+
+To achieve your goal of programmatically extracting information from the labels and generating a user-friendly report, you can follow the steps outlined below:
+
+Step 1: Set up the Development Environment
+
+Choose a programming language that you are comfortable with and that offers good image processing capabilities. Python is a popular choice for this task.
+Install the necessary libraries for image processing, such as OpenCV and PIL.
+Step 2: Read Images from the Directory
+
+Use the programming language and libraries to read all the image files from the specified directory and its subdirectories.
+Separate the JPG and PNG files into different lists for further processing.
+Step 3: Extract Text from Images
+
+Apply Optical Character Recognition (OCR) techniques to extract text from the images. Tesseract is a widely-used OCR engine that can be integrated into your code.
+Process each image file individually and extract the relevant text information.
+Step 4: Parse Extracted Text
+
+Analyze the extracted text to identify the required information such as Artikelname, Artikelnummer, MHD, Einfrierdatum, Erntejahr, LAX, Produktionscode, Batch, and Lot.
+Implement language detection or use a predefined language identifier library to determine the language used on the label (German or English).
+Step 5: Generate the Report
+
+Create a text file (e.g., "file.txt") and open it for writing.
+Organize the extracted information into a user-friendly format, preferably in bullet point style.
+Write the extracted information to the text file, dividing it into two sections: German on the left and English on the right.
+If any information is missing (e.g., Lot or production date), handle it by writing a message like "Information not available" in the appropriate language section.
+Step 6: Finalize and Test
+
+Review your code and ensure it handles different scenarios and edge cases.
+Test it on a variety of labeled images to verify its accuracy and effectiveness.
+Make any necessary adjustments and refinements to improve the code's performance.
+As for a free plan, you can utilize open-source libraries and tools such as Tesseract OCR, which is free to use and provides good text extraction capabilities.
+
+Remember to comply with the licensing terms of the tools and libraries you choose, and ensure that you handle any potential privacy or data security concerns related to the images you process.
+
+This outline should provide you with a starting point for your project. As you progress, you can explore additional techniques, such as image preprocessing or deep learning-based approaches, to enhance the accuracy and efficiency of your solution.
