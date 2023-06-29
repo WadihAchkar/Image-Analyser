@@ -1,0 +1,57 @@
+I have a bunch of images in form of jpg and png in a directory. These images are photos taken by a phone camera,
+as such a lot of these photos display the date of the time they were taken and it looks something like the following example 02/05/2023.
+Each one represents a photo of an etiquette or a label that sometimes has a QR code and a bunch of information about a product.
+These stickers contain specific information about different products. Please note that the language used on these etiquettes or 
+labels is mostly German and sometimes English. I will give you some examples about the kind of information these images have;
+
+Artikelname
+Artikelnummer
+MHD (Mindesthaltbarkeitsdatum)
+Einfrierdatum
+Erntejahr
+LAX
+Produktionscode 
+Batch
+Lot
+
+The goal is to programmatically retrieve all the information that are on the label. (To tackle this problem you will be using JavaScript in addition to the best npm packages if needed. You can also integrate python if required.)
+(To tackle this problem you will be using python in addition to streamlit if needed.)
+
+Please note that the displayed date of the time the photos were taken (mostly visible/shown in the bottom right corner of the image)
+is not of any importance, which means that it should be ignored.
+
+Please also note that the "images" directory has two subdirectories, one for the ".jpg" images and the other for ".png".
+ 
+Make the code in such a way that a pdf file will be generated that contains all the extracted text from each image in a user-friendly manner,
+preferably in a bullet point format along with displaying each image next to the corresponding text.
+
+Since each image is unique our code has to be flexible and smart when dealing with the images.
+Which means that if a "Lot" or a "production date" is not present or missing on the etiquette,
+the code has to inform me as such. For example the code can return a message saying "Information not available".
+The messages should be displayed in two different sections. The first section should be on the left side of the document
+and written in German. The second section should be on the right side of the document and written in English.
+I'm specifically talking about the following data that the code should return:
+
+Artikelname
+Artikelnummer
+MHD (Mindesthaltbarkeitsdatum)
+Einfrierdatum
+Erntejahr
+LAX
+Produktionscode 
+Batch
+Lot
+
+Here's how my folders are ordered.  The "image analyser project" folder is in this case the root directory:
+
+image analyser project
+|
+|____images
+|         |___jpg
+|         |___png
+|
+|____js test scripts
+          |
+          |___index.js
+
+Generate the code in a single block of code down to the smallest detail.
